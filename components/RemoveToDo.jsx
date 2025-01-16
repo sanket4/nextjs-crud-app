@@ -9,9 +9,12 @@ export default function RemoveToDo({ id }) {
   const removeTodo = async () => {
     const confirmed = confirm("are you sure ?");
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/todos?id=${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/todos?id=${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (res.ok) {
         router.refresh();
