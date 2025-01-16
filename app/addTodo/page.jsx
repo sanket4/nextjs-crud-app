@@ -18,7 +18,7 @@ export default function AddTodo() {
     }
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/todos`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/todos`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

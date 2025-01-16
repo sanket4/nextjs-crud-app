@@ -10,7 +10,7 @@ export default function RemoveToDo({ id }) {
     const confirmed = confirm("are you sure ?");
     if (confirmed) {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/todos?id=${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/todos?id=${id}`,
         {
           method: "DELETE",
         }
