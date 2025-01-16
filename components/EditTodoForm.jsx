@@ -12,7 +12,7 @@ export default function EditTodoForm({ id, title, description }) {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/todos/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/todos/${id}`,
         {
           method: "PUT",
           headers: {

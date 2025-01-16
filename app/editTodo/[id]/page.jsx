@@ -2,7 +2,7 @@ import EditTodoForm from "@/components/EditTodoForm";
 
 const getTodobById = async (id) => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/todos/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/todos/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
